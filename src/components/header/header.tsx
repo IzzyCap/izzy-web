@@ -1,3 +1,4 @@
+'use client'
 import React, { useState } from 'react'
 import classes from './header.module.css'
 import Image from 'next/image'
