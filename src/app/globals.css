@@ -2,14 +2,21 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  background-color: #EEF4F7;
-  color: #000;
+  color: var(--black);
+}
+
+:root{
+  --white: #EEF4F7;
+  --black: #000;
+  --light-black: #262633;
+  --light-gray:  #adb5bd;
 }
 
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  background-color: #EEF4F7;
 }
 
 body {
