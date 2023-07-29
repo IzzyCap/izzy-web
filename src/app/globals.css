@@ -7,9 +7,9 @@
 
 :root{
   --white: #EEF4F7;
-  --black: #000;
-  --light-black: #262633;
-  --light-gray:  #adb5bd;
+  --black: #371a45;
+  --light-black: #625a66;
+  --light-gray:  #bbbbbb;
 }
 
 html,
@@ -32,6 +32,11 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.secondarySection {
+  width: 100%;
+  background-color: var(--black);
 }
 
 @media (prefers-color-scheme: dark) {

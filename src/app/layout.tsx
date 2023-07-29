@@ -1,11 +1,11 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Roboto } from 'next/font/google'
+import { Noto_Sans } from 'next/font/google'
 import Header from '@/components/header/header'
 
-const roboto = Roboto({ 
+const noto = Noto_Sans({ 
   subsets: ['latin'],
-  weight: '700'
+  weight: '500'
 })
 
 export const metadata: Metadata = {
@@ -20,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={roboto.className}>
+      <body className={noto.className}>
         <Header/>
         {children}
         <footer>

@@ -12,32 +12,31 @@ export default function Header() {
   }
 
   return (
-    <nav>
-      <div className={classes.menuIcon} onClick={handleShowNavbar}>
-        <img alt='burger button' src='/icons/burger.svg'></img>
+    <header>
+      <div className={classes.menuIcon}>
+        <Image src='/icons/burger.svg' alt='Burger Button' width={40} height={40} priority onClick={handleShowNavbar} />
       </div>
-      <ul className={`${classes.primaryNav} ${showNavbar && classes.active}`}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            src="/logo.svg"
-            alt="Izzy Logo"
+      <div className={classes.containerContainer}>
+        <div className={`${classes.container} ${showNavbar && classes.active}`}>
+          <a
+            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+            target="_blank"
+            rel="noopener noreferrer"
             className={classes.logo}
-            width={200}
-            height={48}
-            priority
-          />
-        </a>
-        <li className={classes.primaryLi}><Link className={classes.link} href='/'>Projects</Link></li>
-        <li className={classes.primaryLi}><Link className={classes.link} href='/assets'>Assets</Link></li>
-        <li className={`${classes.left} ${classes.primaryLi}`}><Link className={classes.link} href='/info'>Info</Link></li>
-        <hr/>
-        <li className={classes.secondaryLi}><Link href="#">Donate</Link></li>
-        <li className={classes.secondaryLi}><Link  href="#">Support</Link></li>
-      </ul>
-    </nav> 
+          >
+            <Image src="/logo.svg" alt="Izzy Logo" width={200} height={48} priority />
+          </a>
+          {/* <div className={classes.closeButton}>
+            <a>x</a>
+          </div> */}
+          <Link href='/' className={classes.primaryLink}>Projects</Link>
+          <Link href='/' className={classes.primaryLink}>Assets</Link>
+          <Link href='/' className={classes.primaryLink}>Info</Link>
+          <hr/>
+          <Link href="#" className={`${classes.rightItem} ${classes.secondaryLink}`}>Donate</Link>
+          <Link  href="#"className={classes.secondaryLink}>Support</Link>
+        </div>
+      </div>
+    </header> 
   )
 }

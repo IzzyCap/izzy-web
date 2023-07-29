@@ -1,9 +1,11 @@
-import styles from './page.module.css'
+import Experience from '@/components/homeSections/experience/experience';
+import Description from '@/components/homeSections/description/description';
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-
-    </main>
+    <>
+      <Description/>
+      <Experience/>
+    </>
   )
 }

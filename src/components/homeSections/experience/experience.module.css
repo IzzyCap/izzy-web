@@ -1,0 +1,11 @@
+.container {
+  padding: 6rem;
+  width: 1200px;
+  margin: auto;
+}
+
+.container p {
+  color: var(--white);
+  margin: auto;
+  font-size: 1.25em;
+}
