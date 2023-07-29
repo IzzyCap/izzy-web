@@ -1,11 +1,30 @@
 .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   padding: 6rem;
   width: 1200px;
+  gap: 3em;
   margin: auto;
 }
 
-.container p {
+.profileImage {
+  outline: 2px solid var(--white);
+  border-radius: 5px;
+}
+
+.text {
   color: var(--white);
   margin: auto;
-  font-size: 1.25em;
+  font-size: 1em;
+  line-height: 2;
+}
+
+.techIcons {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 1em;
 }
