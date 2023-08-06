@@ -5,7 +5,7 @@
   padding:2em;
 }
 
-.containerContainer hr {
+.menuWrapper hr {
   display: none;
 }
 
@@ -19,23 +19,24 @@
 }
 
 .closeButton {
-  color: var(--white);
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
-  padding-right: 16px;
-  font-size: 2em;
+  display: none;
 }
 
 @media (max-width: 768px) {
-  .containerContainer {
+  .header {
+    position: fixed;
+    z-index: 9999;
+  }
+
+  .menuWrapper {
     display: block;
     top: 0;
     position: fixed;
     height: 100vh;
+    border-right: 2px solid rgba(255, 255, 255, 0.1);;
   }
 
-  .containerContainer hr {
+  .menuWrapper hr {
     display: block;
     border-color: rgba(255, 255, 255, 0.1);
     width: 100%;
@@ -47,24 +48,31 @@
     cursor: pointer;
   }
 
+  .closeButton {
+    color: var(--white);
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    font-size: 2em;
+  }
+
   .container {
     align-items:start;
     display: flex;
-    position: fixed;
     width: 0;
     gap: 0;
     overflow: hidden;
     flex-direction: column;
-    background-color:var(--light-black);
+    background-color:var(--black);
     height: 100vh;
     color: var(--white);
     transition: all 0.3s ease-in;
-    padding: 2em 0;
+    padding: 0;
   }
 
   .container.active {
     width: 250px;
-    padding-left:2em;
+    padding: 1em 1em 1em 2em;
   }
 
   .rightItem {

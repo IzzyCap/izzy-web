@@ -1,6 +1,7 @@
 .container {
   padding: 6rem;
   width: 100%;
+  max-width: 1200px;
   margin: auto;
 }
 
@@ -20,7 +21,12 @@
 
 @media screen and (max-width: 960px) {
   .projectsContainer {
-    grid-template-columns: auto auto;
+    grid-template-columns: auto;
   }
 }
 
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 3rem;
+  }
+}

@@ -22,7 +22,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={noto.className}>
         <Header/>
-        {children}
+        <main>
+          {children}
+        </main>
         <footer>
 
         </footer>

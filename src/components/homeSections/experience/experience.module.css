@@ -4,7 +4,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 6rem;
-  width: 1200px;
+  width: 100%;
+  max-width: 1200px;
   gap: 3em;
   margin: auto;
 }
@@ -19,12 +20,34 @@
   margin: auto;
   font-size: 1em;
   line-height: 2;
+  width: 100%;
 }
 
 .techIcons {
   margin-top: 2em;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: flex-start;
   gap: 1em;
 }
+
+@media screen and (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 3rem;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .profileImage {
+    width: 240px;
+    height: 240px;
+  }
+}
+

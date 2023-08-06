@@ -12,11 +12,11 @@ export default function Header() {
   }
 
   return (
-    <header>
+    <header className={classes.header}>
       <div className={classes.menuIcon}>
         <Image src='/icons/burger.svg' alt='Burger Button' width={40} height={40} priority onClick={handleShowNavbar} />
       </div>
-      <div className={classes.containerContainer}>
+      <div className={classes.menuWrapper}>
         <div className={`${classes.container} ${showNavbar && classes.active}`}>
           <a
             href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
@@ -26,9 +26,9 @@ export default function Header() {
           >
             <Image src="/logo.svg" alt="Izzy Logo" width={200} height={48} priority />
           </a>
-          {/* <div className={classes.closeButton}>
-            <a>x</a>
-          </div> */}
+          <div className={classes.closeButton}>
+            <Image src='/icons/close.svg' alt='Close Button' width={40} height={40} priority onClick={handleShowNavbar} />
+          </div>
           <Link href='/' className={classes.primaryLink}>Projects</Link>
           <Link href='/' className={classes.primaryLink}>Assets</Link>
           <Link href='/' className={classes.primaryLink}>Info</Link>
