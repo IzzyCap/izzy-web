@@ -1,29 +1,47 @@
-import classes from './card.module.css'
+'use client'
+import { useState } from 'react';
+import classes from './card.module.scss'
 
-// interface CardProps {
-//   animationPath: string;
-// }
+interface CardProps {
+  cardInfo: CardInfo;
+}
 
-// const Card: React.FC<CardProps> =  ({ animationPath }) => {
-const Card: React.FC =  () => {
+const Card: React.FC<CardProps> =  ({ cardInfo }) => {
+  const [modalOpen, setModalOpen] = useState<boolean>(false);
+
+  const OpenModal = () => {
+    setModalOpen(true);
+  }
+
+  const CloseModal = () => {
+    setModalOpen(false);
+  }
+
   return (
-    <div className={classes.articleWrapper}>
-      <figure className={classes.banner}>
-        <img src="https://picsum.photos/id/1011/800/450" alt="" />
-      </figure>
-      <div className={classes.articleBody}>
-        <h2>This is some title</h2>
-        <p>
-          Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros.
-        </p>
-        <a href="#" className={classes.readMore}>
-          Read more
-          <svg xmlns="http://www.w3.org/2000/svg" className={classes.icon} viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-          </svg>
-        </a>
+    <>
+      <div className={`${classes.modalContainer} ${classes.open} ${modalOpen ? '' : classes.close}`} onClick={CloseModal}>
+        <div className={classes.modalBackground}>
+          <div className={classes.modal}>
+            <h2>Im a Modal</h2>
+            <p>Hear me roar.</p>
+            <svg className={classes.modalSvg} xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none">
+              <rect x="0" y="0" fill="none" width="226" height="162" rx="3" ry="3"></rect>
+            </svg>
+          </div>
+        </div>
       </div>
-    </div>
+      <div className={classes.articleWrapper} onClick={OpenModal}>
+        <figure className={classes.banner}>
+          <img src={cardInfo.image} alt="" />
+        </figure>
+        <div className={classes.articleBody}>
+          <h2>{cardInfo.title}</h2>
+          <p>
+            {cardInfo.description}
+          </p>
+        </div>
+      </div>
+    </>
   );
 };
 
