@@ -1,5 +1,7 @@
+import Modal from '@/components/modal/modal';
 import classes from './projects.module.css'
 import Card from '@/components/card/card'
+import { useState } from 'react';
 
 // [TODO] move card data to a file or DB.
 const cardMathType: CardInfo = {
@@ -31,15 +33,20 @@ const cardLolo: CardInfo = {
 }
 
 export default function Projects() {
-  return (   
-    <div className={classes.container}>
-      <h1>Projects</h1>
-      <div className={classes.projectsContainer}>
-        <Card cardInfo={cardMathType}/>
-        <Card cardInfo={cardPorfolio}/>
-        <Card cardInfo={cardLolo}/>
-        <Card cardInfo={cardMinter}/>
+  return (
+    <>
+      {/* <Modal>
+        <h1>Projects</h1>
+      </Modal> */}
+      <div className={classes.container}>
+        <h1>Projects</h1>
+        <div className={classes.projectsContainer}>
+          <Card cardInfo={cardMathType}/>
+          <Card cardInfo={cardPorfolio}/>
+          <Card cardInfo={cardLolo}/>
+          <Card cardInfo={cardMinter}/>
+        </div>
       </div>
-    </div>
+    </>
   )
 }

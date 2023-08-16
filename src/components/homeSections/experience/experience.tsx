@@ -9,7 +9,7 @@ export default function Experience() {
         <Image className={classes.profileImage} src="/images/me.jpg" alt="Izzy Logo" width={360} height={360} priority />
         <div>
           <p className={classes.text}>
-            Full Stack software developer with more than 4 years of experience. Currently based in Barcelona.
+            Full Stack software developer with more than 4 years of experience. Based in Barcelona.
             <br/><br/>
             Currently working at Wiris developing digital solutions for Math and Science. TypeScript, Node.js, React.js and Docker are some of the many technologies that I use in my day to day with my professional and personal projects.
             <br/><br/>

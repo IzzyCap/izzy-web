@@ -2,6 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Noto_Sans } from 'next/font/google'
 import Header from '@/components/header/header'
+import { ModalContextProvider } from '@/store/modalContext'
 
 const noto = Noto_Sans({ 
   subsets: ['latin'],
@@ -23,7 +24,9 @@ export default function RootLayout({
       <body className={noto.className}>
         <Header/>
         <main>
-          {children}
+          <ModalContextProvider>
+            {children}
+          </ModalContextProvider>
         </main>
         <footer>
 
