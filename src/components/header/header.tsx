@@ -33,8 +33,8 @@ export default function Header() {
           <Link href='/' className={classes.primaryLink}>Assets</Link>
           <Link href='/' className={classes.primaryLink}>Info</Link>
           <hr/>
-          <Link href="#" className={`${classes.rightItem} ${classes.secondaryLink}`}>Donate</Link>
-          <Link  href="#"className={classes.secondaryLink}>Support</Link>
+          {/* <Link href="#" className={`${classes.rightItem} ${classes.secondaryLink}`}>Donate</Link>
+          <Link  href="#"className={classes.secondaryLink}>Support</Link> */}
         </div>
       </div>
     </header> 

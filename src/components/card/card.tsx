@@ -16,7 +16,7 @@ const Card: React.FC<CardProps> =  ({ cardInfo }) => {
         <figure className={classes.modalBanner}>
           <img src={cardInfo.image} alt="" />
         </figure>
-        <div className={classes.articleBody}>
+        <div className={classes.modalBody}>
           <h2>{cardInfo.title}</h2>
           <p>
             {cardInfo.description}

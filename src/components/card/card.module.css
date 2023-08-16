@@ -29,6 +29,12 @@
   transition: color 0.3s ease-out;
 }
 
+.modalBody p {
+  margin: 18px;
+  max-width: 600px;
+  line-height: 1.5em;
+}
+
 .articleBody p {
   margin-bottom: 18px;
   max-width: 600px;
