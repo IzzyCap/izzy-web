@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 // [TODO] move card data to a file or DB.
 const cardMathType: CardInfo = {
-  title: 'MathType Web',
+  title: 'MathType Integrations for Web',
   description: 'The official JavaScript library for MathType, the leading formula editor and equation writer for the web by Wiris',
   link: 'string',
   image: "/projects/mathtype.png",
