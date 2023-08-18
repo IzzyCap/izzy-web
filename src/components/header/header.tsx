@@ -33,8 +33,14 @@ export default function Header() {
           <Link href='/' className={classes.primaryLink}>Assets</Link>
           <Link href='/' className={classes.primaryLink}>Info</Link>
           <hr/>
-          {/* <Link href="#" className={`${classes.rightItem} ${classes.secondaryLink}`}>Donate</Link>
-          <Link  href="#"className={classes.secondaryLink}>Support</Link> */}
+          <Link href="#" className={`${classes.rightItem} ${classes.secondaryLink}`}>
+            <Image src="/icons/close.svg" alt="Izzy Github" width={35} height={35} priority />
+            GitHub
+          </Link>
+          <Link href="#" className={`${classes.secondaryLink}`}>
+            <Image src="/icons/close.svg" alt="Izzy Github" width={35} height={35} priority />
+            LinkedIn
+          </Link>
         </div>
       </div>
     </header> 

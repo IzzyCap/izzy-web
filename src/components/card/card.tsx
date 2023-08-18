@@ -1,7 +1,10 @@
+/* eslint-disable @next/next/no-img-element */
 'use client'
 import { useContext } from 'react';
 import classes from './card.module.css'
+import Image from 'next/image'
 import ModalContext from '@/store/modalContext';
+import TechIcon from '../techIcon/techIcon';
 
 interface CardProps {
   cardInfo: CardInfo;
@@ -10,17 +13,31 @@ interface CardProps {
 const Card: React.FC<CardProps> =  ({ cardInfo }) => {
   const modalCtx = useContext(ModalContext);
 
+  const createTechRow = () => {
+    return (    
+      cardInfo.techIcons.map((icon) => {
+        return (<TechIcon key={icon} iconPath={`/tech/${icon}`} iconAlt={icon} dark={false}/>)
+      })
+    )
+  }
+
   const openModal = () => {
     modalCtx.openModal(
       <div className={classes.modalWrapper} onClick={openModal}>
         <figure className={classes.modalBanner}>
-          <img src={cardInfo.image} alt="" />
+          <img src={cardInfo.image} alt="Card image" />
         </figure>
         <div className={classes.modalBody}>
-          <h2>{cardInfo.title}</h2>
+          <div className={classes.modalTitle}>
+            <h2>{cardInfo.title}</h2>
+            <Image src="/icons/link.svg" alt="Link" width={25} height={25} priority/>
+          </div>
           <p>
             {cardInfo.description}
           </p>
+          <div className={classes.techIcons}>
+            {createTechRow()}
+          </div>
         </div>
       </div>
     );

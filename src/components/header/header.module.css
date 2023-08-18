@@ -22,6 +22,19 @@
   display: none;
 }
 
+.secondaryLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+
+@media (max-width: 900px) {
+  .logo {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
   .header {
     position: fixed;
@@ -80,10 +93,6 @@
     align-self: start;
   }
 
-  .logo {
-    display: none;
-  }
-
   .primaryLink {
     font-size: 1.25em;
     padding: 8px 8px 8px 0;
@@ -94,5 +103,9 @@
     font-size: 0.75em;
     padding: 8px 8px 8px 0;
     color: var(--light-gray);
+  }
+
+  .secondaryLink img {
+    display: none;
   }
 }

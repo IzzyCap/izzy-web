@@ -1,4 +1,4 @@
-.container {
+.descriptionWrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -10,28 +10,28 @@
   margin: auto;
 }
 
-.container h2 {
+.descriptionWrapper h2 {
   color: var(--light-black)
 }
 
-@media screen and (max-width: 960px) {
-  .container {
+@media (max-width: 960px) {
+  .descriptionWrapper {
     flex-direction: column;
   }
 }
 
-@media screen and (max-width: 768px) {
-  .container {
+@media (max-width: 768px) {
+  .descriptionWrapper {
     padding: 3rem;
     margin-top: 3rem;
     min-height: 0vh;
   }
 
-  .container h1 {
+  .descriptionWrapper h1 {
     text-align: center;
   }
 
-  .container h2 {
+  .descriptionWrapper h2 {
     text-align: center;
   }
 }

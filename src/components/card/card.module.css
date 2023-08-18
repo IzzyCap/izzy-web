@@ -31,8 +31,9 @@
 
 .modalBody p {
   margin: 18px;
-  max-width: 600px;
+  width: 100%;
   line-height: 1.5em;
+  text-align: left;
 }
 
 .articleBody p {
@@ -58,12 +59,41 @@
   padding: 24px;
 }
 
-.modalBanner img{
-  max-height: 350px
+.modalWrapper {
+  max-width: 750px;
 }
 
+.modalBanner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-@media screen and (max-width: 960px) {
+.modalBanner img{
+  max-height: 400px
+}
+
+.modalBody {
+  padding: 2em;
+}
+
+.modalTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5em;
+}
+
+.techIcons {
+  margin-top: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  gap: .5em;
+}
+
+@media (max-width: 960px) {
   .articleWrapper {
     display: grid;
     grid-template-columns: 100px 1fr;
@@ -83,3 +113,10 @@
     height: 100%;
   }
 }
+
+@media (max-width: 750px) {
+  .modalBanner img {
+    width: 100%;
+  }
+}
+

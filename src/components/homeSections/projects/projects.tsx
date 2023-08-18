@@ -6,39 +6,44 @@ import { useState } from 'react';
 // [TODO] move card data to a file or DB.
 const cardMathType: CardInfo = {
   title: 'MathType Integrations for Web',
-  description: 'The official JavaScript library for MathType, the leading formula editor and equation writer for the web by Wiris',
-  link: 'string',
+  description: 'The official JavaScript library for MathType, the leading formula editor and equation writer for the web by Wiris.',
+  longDescription: 'The official JavaScript library for MathType, the leading formula editor and equation writer for the web by Wiris.',
   image: "/projects/mathtype.png",
+  techIcons: ['JavaScript.svg'],
+  link: 'https://github.com/wiris/html-integrations'
 };
 
 const cardPorfolio: CardInfo = {
   title: 'Web Portfolio',
-  description: 'Even this web page powered by Next.js is open source. Take a look at the code',
-  link: 'string',
+  description: 'Even this web page powered by Next.js is open source. Take a look at the code.',
+  longDescription: 'Even this web page powered by Next.js is open source. Take a look at the code.',
   image: "/projects/porfolio.png",
+  techIcons: ['TypeScript.svg'],
+  link: 'https://github.com/IzzyCap/izzy-web'
 }
 
 const cardMinter: CardInfo = {
   title: 'Mutable NFTs minter',
-  description: 'This tool allow you to create mutable NFTs on the powerful and sustainable Algorand blockchain',
-  link: 'string',
+  description: 'This tool allow you to create mutable NFTs on the powerful and sustainable Algorand blockchain.',
+  longDescription: 'This tool allow you to create mutable NFTs on the powerful and sustainable Algorand blockchain.',
   image: "/projects/algorand.png",
+  techIcons: ['TypeScript.svg'],
+  link: 'https://github.com/IzzyCap/algorand-arc19-auto-mint'
 }
 
 const cardLolo: CardInfo = {
   title: 'Lolo',
   description: 'Addictive rhythm game, where you play as a goofy slime, with the mission to collect three golden eighth notes scattered in three different levels.',
-  link: 'string',
+  longDescription: 'Addictive rhythm game, where you play as a goofy slime, with the mission to collect three golden eighth notes scattered in three different levels.',
+  techIcons: ['TypeScript.svg'],
   image: "/projects/lolo.png",
+  link: 'https://team-alpaca.itch.io/lolo',
 }
 
 export default function Projects() {
   return (
     <>
-      {/* <Modal>
-        <h1>Projects</h1>
-      </Modal> */}
-      <div className={classes.container}>
+      <div className={classes.projectWrapper}>
         <h1>Projects</h1>
         <div className={classes.projectsContainer}>
           <Card cardInfo={cardMathType}/>

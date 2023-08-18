@@ -1,11 +1,11 @@
-.container {
+.projectWrapper {
   padding: 6rem;
   width: 100%;
   max-width: 1200px;
   margin: auto;
 }
 
-.container h1 {
+.projectWrapper h1 {
   text-align: center;
   width: 100%;
   margin-bottom: 1em;
@@ -19,14 +19,14 @@
   gap: 24px;
 }
 
-@media screen and (max-width: 960px) {
+@media (max-width: 960px) {
   .projectsContainer {
     grid-template-columns: auto;
   }
 }
 
-@media screen and (max-width: 768px) {
-  .container {
+@media (max-width: 768px) {
+  .projectWrapper {
     padding: 3rem;
   }
 }

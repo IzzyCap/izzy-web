@@ -5,7 +5,7 @@ import Image from 'next/image'
 export default function Experience() {
   return (
     <div className='secondarySection'>
-      <div className={classes.container}>
+      <div className={`${classes.experienceWrapper}`}>
         <Image className={classes.profileImage} src="/images/me.jpg" alt="Izzy Logo" width={360} height={360} priority />
         <div>
           <p className={classes.text}>
@@ -16,14 +16,14 @@ export default function Experience() {
             Graduated in Videogame Production and Development I also love to share my own created resources to the Unity community.
           </p>
           <div className={classes.techIcons}>
-            <TechIcon iconPath={'/tech/JavaScript.svg'} iconAlt={'JavaScript Icon'} />
-            <TechIcon iconPath={'/tech/TypeScript.svg'} iconAlt={'TypeScript Icon'} />
-            <TechIcon iconPath={'/tech/Next.js.svg'} iconAlt={'Next.js Icon'} />
-            <TechIcon iconPath={'/tech/React.svg'} iconAlt={'React Icon'} />
-            <TechIcon iconPath={'/tech/Docker.svg'} iconAlt={'Docker Icon'} />
-            <TechIcon iconPath={'/tech/CSharp.svg'} iconAlt={'CSharp Icon'} />
-            <TechIcon iconPath={'/tech/HTML5.svg'} iconAlt={'HTML5 Icon'} />
-            <TechIcon iconPath={'/tech/CSS3.svg'} iconAlt={'CSS3 Icon'} />
+            <TechIcon iconPath={'/tech/JavaScript.svg'} iconAlt={'JavaScript Icon'} dark={true}/>
+            <TechIcon iconPath={'/tech/TypeScript.svg'} iconAlt={'TypeScript Icon'} dark={true}/>
+            <TechIcon iconPath={'/tech/Next.js.svg'} iconAlt={'Next.js Icon'} dark={true}/>
+            <TechIcon iconPath={'/tech/React.svg'} iconAlt={'React Icon'} dark={true}/>
+            <TechIcon iconPath={'/tech/Docker.svg'} iconAlt={'Docker Icon'} dark={true}/>
+            <TechIcon iconPath={'/tech/CSharp.svg'} iconAlt={'CSharp Icon'} dark={true}/>
+            <TechIcon iconPath={'/tech/HTML5.svg'} iconAlt={'HTML5 Icon'} dark={true}/>
+            <TechIcon iconPath={'/tech/CSS3.svg'} iconAlt={'CSS3 Icon'} dark={true}/>
           </div>
         </div>
       </div>

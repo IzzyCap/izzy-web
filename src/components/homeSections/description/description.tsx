@@ -5,7 +5,7 @@ export default function Description() {
   const animationPath = '/animations/dev.json'; // Correct path to the animation JSON file
 
   return (
-    <div className={classes.container}>
+    <div className={classes.descriptionWrapper}>
       <div>
         <h1>Izzy Caparrós Salvà</h1>
         <br/>
