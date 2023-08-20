@@ -20,6 +20,7 @@ export default function Experience() {
             <TechIcon iconPath={'/tech/TypeScript.svg'} iconAlt={'TypeScript Icon'} dark={true}/>
             <TechIcon iconPath={'/tech/Next.js.svg'} iconAlt={'Next.js Icon'} dark={true}/>
             <TechIcon iconPath={'/tech/React.svg'} iconAlt={'React Icon'} dark={true}/>
+            <TechIcon iconPath={'/tech/Unity.svg'} iconAlt={'Unity Icon'} dark={true}/>
             <TechIcon iconPath={'/tech/Docker.svg'} iconAlt={'Docker Icon'} dark={true}/>
             <TechIcon iconPath={'/tech/CSharp.svg'} iconAlt={'CSharp Icon'} dark={true}/>
             <TechIcon iconPath={'/tech/HTML5.svg'} iconAlt={'HTML5 Icon'} dark={true}/>

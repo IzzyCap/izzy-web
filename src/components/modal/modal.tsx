@@ -1,5 +1,4 @@
 'use client'
-import { useState } from 'react';
 import classes from './modal.module.scss'
 
 interface ModalProps {
@@ -13,16 +12,19 @@ const Modal: React.FC<ModalProps> = ({isOpen, setIsOpen, children }) => {
     setIsOpen(false);
   }
 
+  const handleModalClick = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    // Prevent the click event from propagating to the background
+    event.stopPropagation();
+  };
+
   return (
-    <>
-      <div className={`${classes.modalContainer} ${classes.open} ${isOpen ? '' : classes.close}`} onClick={closeModal}>
-        <div className={classes.modalBackground}>
-          <div className={classes.modal}>
-            {children}
-          </div>
+    <div className={`${classes.modalContainer} ${classes.open} ${isOpen ? '' : classes.close}`}>
+      <div className={classes.modalBackground} onClick={closeModal}>
+        <div className={classes.modal} onClick={handleModalClick}>
+          {children}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

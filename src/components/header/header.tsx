@@ -29,16 +29,15 @@ export default function Header() {
           <div className={classes.closeButton}>
             <Image src='/icons/close.svg' alt='Close Button' width={40} height={40} priority onClick={handleShowNavbar} />
           </div>
+          <Link href='/' className={classes.primaryLink}>About Me</Link>
           <Link href='/' className={classes.primaryLink}>Projects</Link>
-          <Link href='/' className={classes.primaryLink}>Assets</Link>
-          <Link href='/' className={classes.primaryLink}>Info</Link>
           <hr/>
-          <Link href="#" className={`${classes.rightItem} ${classes.secondaryLink}`}>
-            <Image src="/icons/close.svg" alt="Izzy Github" width={35} height={35} priority />
+          <Link href="https://github.com/IzzyCap" target="_blank" className={`${classes.rightItem} ${classes.secondaryLink}`}>
+            <Image src="/icons/github.svg" alt="Izzy Github" width={35} height={35} priority />
             GitHub
           </Link>
-          <Link href="#" className={`${classes.secondaryLink}`}>
-            <Image src="/icons/close.svg" alt="Izzy Github" width={35} height={35} priority />
+          <Link href="https://www.linkedin.com/in/isaac-caparr%C3%B3s-salv%C3%A0-83b035113/" target="_blank" className={`${classes.secondaryLink}`}>
+            <Image src="/icons/linkedin.svg" alt="Izzy Github" width={35} height={35} priority />
             LinkedIn
           </Link>
         </div>

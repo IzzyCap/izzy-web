@@ -5,6 +5,7 @@ import classes from './card.module.css'
 import Image from 'next/image'
 import ModalContext from '@/store/modalContext';
 import TechIcon from '../techIcon/techIcon';
+import Link from 'next/link';
 
 interface CardProps {
   cardInfo: CardInfo;
@@ -30,10 +31,12 @@ const Card: React.FC<CardProps> =  ({ cardInfo }) => {
         <div className={classes.modalBody}>
           <div className={classes.modalTitle}>
             <h2>{cardInfo.title}</h2>
-            <Image src="/icons/link.svg" alt="Link" width={25} height={25} priority/>
+            <Link href={cardInfo.link} className='center-element' target="_blank">
+              <Image src="/icons/link.svg" alt="Link" width={25} height={25} priority/>
+            </Link>
           </div>
           <p>
-            {cardInfo.description}
+            {cardInfo.longDescription}
           </p>
           <div className={classes.techIcons}>
             {createTechRow()}
