@@ -1,7 +1,7 @@
 .container {
   display: flex;
   align-items: center;
-  gap: 3em;
+  gap: 1em;
   padding:2em;
 }
 
@@ -26,86 +26,4 @@
   display: flex;
   align-items: center;
   gap: 0.5em;
-}
-
-
-@media (max-width: 900px) {
-  .logo {
-    display: none;
-  }
-}
-
-@media (max-width: 768px) {
-  .header {
-    position: fixed;
-    z-index: 9999;
-  }
-
-  .menuWrapper {
-    display: block;
-    top: 0;
-    position: fixed;
-    height: 100vh;
-    border-right: 2px solid rgba(255, 255, 255, 0.1);;
-  }
-
-  .menuWrapper hr {
-    display: block;
-    border-color: rgba(255, 255, 255, 0.1);
-    width: 100%;
-    margin: 1em 0 1em 0;
-  }
-
-  .menuIcon {
-    display: block;
-    cursor: pointer;
-  }
-
-  .closeButton {
-    color: var(--white);
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    font-size: 2em;
-  }
-
-  .container {
-    align-items:start;
-    display: flex;
-    width: 0;
-    gap: 0;
-    overflow: hidden;
-    flex-direction: column;
-    background-color:var(--black);
-    height: 100vh;
-    color: var(--white);
-    transition: all 0.3s ease-in;
-    padding: 0;
-  }
-
-  .container.active {
-    width: 250px;
-    padding: 1em 1em 1em 2em;
-  }
-
-  .rightItem {
-    margin: 0;
-    align-self: start;
-  }
-
-  .primaryLink {
-    font-size: 1.25em;
-    padding: 8px 8px 8px 0;
-    color: var(--white);
-  }
-
-  .secondaryLink {
-    font-size: 0.75em;
-    padding: 8px 8px 8px 0;
-    color: var(--light-gray);
-  }
-
-  .secondaryLink img {
-    display: none;
-  }
 }
