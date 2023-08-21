@@ -18,7 +18,7 @@ const Modal: React.FC<ModalProps> = ({isOpen, setIsOpen, children }) => {
   };
 
   return (
-    <div className={`${classes.modalContainer} ${classes.open} ${isOpen ? '' : classes.close}`}>
+    <div className={`${classes.modalContainer} ${isOpen ? classes.open : classes.close}`}>
       <div className={classes.modalBackground} onClick={closeModal}>
         <div className={classes.modal} onClick={handleModalClick}>
           {children}

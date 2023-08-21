@@ -14,17 +14,21 @@
   color: var(--light-black)
 }
 
+.downloadButton {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  padding-top: 2em;
+}
+
 @media (max-width: 960px) {
   .descriptionWrapper {
     flex-direction: column;
   }
-}
 
-@media (max-width: 768px) {
-  .descriptionWrapper {
-    padding: 3rem;
-    margin-top: 3rem;
-    min-height: 0vh;
+  .downloadButton {
+    justify-content: center;
+    align-items: center;
   }
 
   .descriptionWrapper h1 {
@@ -33,5 +37,13 @@
 
   .descriptionWrapper h2 {
     text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .descriptionWrapper {
+    padding: 3rem;
+    margin-top: 3rem;
+    min-height: 0vh;
   }
 }

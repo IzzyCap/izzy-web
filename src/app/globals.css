@@ -7,11 +7,14 @@
 
 :root{
   --white: #e9f3f6;
+  --black: #371a45;
+  --light-black: #7c7a7d;
+  --light-gray:  #bbbbbb;
+  --gray-disable: #b4b4b4;
+  --green: #03be9f;
+  --green-active: #02afa1; 
   --blue: #91d4de;
   --orange: #fbc8a0;
-  --black: #371a45;
-  --light-black: #625a66;
-  --light-gray:  #bbbbbb;
 }
 
 html,
@@ -45,6 +48,10 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.highlight-text {
+  color: var(--green);
 }
 
 @media (prefers-color-scheme: dark) {

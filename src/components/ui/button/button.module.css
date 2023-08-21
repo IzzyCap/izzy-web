@@ -1,0 +1,26 @@
+.btn {
+  text-decoration: none;
+  cursor: pointer;
+  font: inherit;
+  font-size: 1em;
+  background-color: var(--green);
+  border: 1px solid var(--green);
+  border-radius: 6px;
+  color: var(--white);
+  padding: 0.5rem 3rem;
+  text-align: center;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover,
+.btn:active {
+  background-color: var(--green-active);
+  border-color: var(--green-active);
+}
+
+.disable {
+  background-color: var(--gray-disable) !important;
+  border-color: var(--gray-disable) !important;
+  color: white !important;
+  cursor: default;
+}
