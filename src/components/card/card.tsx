@@ -6,6 +6,7 @@ import Image from 'next/image'
 import ModalContext from '@/store/modalContext';
 import TechIcon from '../techIcon/techIcon';
 import Link from 'next/link';
+import { bebas } from '../../app/fonts';
 
 interface CardProps {
   cardInfo: CardInfo;
@@ -53,7 +54,7 @@ const Card: React.FC<CardProps> =  ({ cardInfo }) => {
           <img src={cardInfo.image} alt="" />
         </figure>
         <div className={classes.articleBody}>
-          <h2>{cardInfo.title}</h2>
+          <h2 className={bebas.className}>{cardInfo.title}</h2>
           <p>
             {cardInfo.description}
           </p>

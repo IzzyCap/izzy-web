@@ -1,13 +1,8 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Noto_Sans } from 'next/font/google'
 import Header from '@/components/header/header'
 import { ModalContextProvider } from '@/store/modalContext'
-
-const noto = Noto_Sans({ 
-  subsets: ['latin'],
-  weight: '500'
-})
+import { noto } from './fonts'
 
 export const metadata: Metadata = {
   title: 'Izzy Portfolio',

@@ -10,6 +10,7 @@
   transform-origin: center;
   transition: all 0.4s ease-in-out;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .articleWrapper:has(:hover, :focus) {
@@ -22,7 +23,6 @@
 
 .articleBody h2 {
   margin: 0 0 18px 0;
-  font-family: "Bebas Neue", cursive;
   font-size: 1.9rem;
   letter-spacing: 0.06em;
   color: var(--title-color);
