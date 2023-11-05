@@ -1,0 +1,39 @@
+.wave {
+  display: block;
+  position: absolute;
+  left: 0px;
+  width: 100%;
+}
+
+.waveTop {
+  background-image: url("/frontpage-wave-top.svg");
+  animation: move-horizontal 8s linear infinite;
+  background-size: 1280px 33px;
+  height: 33px;
+}
+
+.waveBottom {
+  background-image: url("/frontpage-wave-bottom.svg");
+  animation: move-horizontal-reverse 8s linear infinite;
+  background-size: 1280px 48px;
+  height: 48px;
+  background-color: var(--black);
+}
+
+@keyframes move-horizontal {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 1280px 0;
+  }
+}
+
+@keyframes move-horizontal-reverse {
+  0% {
+    background-position: 1280px 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
