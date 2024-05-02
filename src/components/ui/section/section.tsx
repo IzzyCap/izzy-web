@@ -4,6 +4,7 @@ type Props = {
   children: React.ReactNode;
 };
 
+// [TODO] make secondary section configurable
 export default function Experience({ children }: Props) {
   return (
     <section className="secondarySection">

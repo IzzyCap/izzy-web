@@ -26,8 +26,7 @@ export default function Header() {
       <div className={classes.menuWrapper}>
         <div className={`${classes.container} ${showNavbar && classes.active}`}>
           <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
+            href="./"
             rel="noopener noreferrer"
             className={classes.logo}
           >
