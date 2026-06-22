@@ -1,5 +1,9 @@
 import classes from "./description.module.css";
-import Animation from "@/components/animation/animation";
+import dynamic from "next/dynamic";
+
+const Animation = dynamic(() => import("@/components/animation/animation"), {
+  ssr: false,
+});
 
 export default function Description() {
   const animationPath = "/animations/dev.json"; // Correct path to the animation JSON file
